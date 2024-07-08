@@ -1,0 +1,85 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.registration-form, .login-form {
+  width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+}
+
+.registration-form form, .login-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-form .form-group, .login-form .form-group {
+  margin-bottom: 15px;
+}
+
+.registration-form label, .login-form label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: inline-block;
+  width: 150px; 
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="password"],
+.registration-form input[type="email"],
+.registration-form input[type="number"],
+.registration-form select,
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"],
+.login-form input[type="number"],
+.login-form select {
+  width: calc(100% - 150px); /* Adjust width to align with labels */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.registration-form select, .login-form select {
+  width: calc(100% - 150px); 
+}
+
+.registration-form .submit-btn, .login-form .submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.registration-form .submit-btn:hover, .login-form .submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.registration-form .error-message, .login-form .error-message {
+  color: #dc3545;
+  font-size: 12px;
+}
+
+.registration-form .form-control.error, .login-form .form-control.error {
+  border-color: #dc3545;
+}
+
+@media (max-width: 480px) {
+  .registration-form, .login-form {
+    width: 90%;
+  }
+}
